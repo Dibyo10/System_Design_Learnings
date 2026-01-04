@@ -270,7 +270,7 @@ Select the algorithm from the menu and observe:
 
 ## Learning Resources
 
-This guide was created using the following sources:
+I used these resources to learn! ->
 
 - **Video Tutorial:** [System Design - Rate Limiting](https://youtu.be/CVItTb_jdkE?si=wBX1fT5omGPgSQgP)
 - **System Design Interview Guide:** [ByteByteGo - Design a Rate Limiter](https://bytebytego.com/courses/system-design-interview/design-a-rate-limiter)
