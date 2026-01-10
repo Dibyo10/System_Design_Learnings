@@ -40,7 +40,7 @@ func main() {
 
 	consistentPct := float64(movedConsistent) / float64(len(keys)) * 100
 
-	// ---------- MODULO HASHING ----------
+
 	nodes := []string{"A", "B", "C", "D"}
 
 	oldModulo := make(map[string]string)
@@ -59,12 +59,12 @@ func main() {
 
 	moduloPct := float64(movedModulo) / float64(len(keys)) * 100
 
-	// ---------- RESULTS ----------
+
 	fmt.Printf("CONSISTENT HASHING movement: %.2f %%\n", consistentPct)
 	fmt.Printf("MODULO HASHING movement:     %.2f %%\n", moduloPct)
 }
 
-// ---------------- CONSISTENT HASHING ----------------
+
 
 func NewHashRing(replicas int) *HashRing {
 	if replicas <= 0 {
@@ -100,8 +100,6 @@ func (h *HashRing) GetNode(key string) string {
 	}
 	return h.ring[h.keys[idx]]
 }
-
-// ---------------- MODULO HASHING ----------------
 
 func getNodeModulo(key string, nodes []string) string {
 	hash := crc32.ChecksumIEEE([]byte(key))
